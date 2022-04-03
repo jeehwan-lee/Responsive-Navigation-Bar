@@ -1,0 +1,71 @@
+nav {
+    height: 80px;
+    background: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+}
+
+nav .logo {
+    font-size: 33px;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    /* 2개 있을 경우 상하, 좌우 동시에 적용하며 4개는 상우하좌 순서 */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* 변화가 생길 경우, 일정 시간에 걸쳐 애니메이션 효과를 주며 변화 */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1b1b1b;
+    background-color: #fff;
+}
+
+/* @media는 반응형 웹을 위한것으로 940px 미만일 경우 아래와 같이 변화됨 */ 
+@media (max-width:940px) {
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: cyan;
+        background: none;
+    }
+}
